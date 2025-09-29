@@ -49,6 +49,15 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
             </Link>
+            <Button 
+              variant="secondary" 
+              size="lg"
+              className="bg-card border border-border hover:bg-accent font-semibold text-lg px-8 py-4 transition-smooth"
+              onClick={() => window.open('https://youtube.com/watch?v=intro', '_blank')}
+            >
+              <Play className="mr-2 h-5 w-5" />
+              Watch My Intro
+            </Button>
             <Link to="/portfolio">
               <Button 
                 variant="outline" 

@@ -5,6 +5,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Badge } from "@/components/ui/badge";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { MediaManager } from '@/components/cms/media-manager'
+import { BlogManager } from '@/components/cms/blog-manager'
 import { 
   LayoutDashboard, 
   FileText, 
@@ -466,31 +468,39 @@ export default function Admin() {
               </Card>
             </TabsContent>
 
-            <TabsContent value="settings">
-              <Card>
-                <CardHeader>
-                  <CardTitle>Site Settings</CardTitle>
-                  <CardDescription>
-                    Configure your website settings and integrations
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <div className="flex items-center justify-center h-48 border-2 border-dashed border-border rounded-lg">
-                    <div className="text-center">
-                      <Settings className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
-                      <p className="text-lg font-semibold mb-2">Site Settings</p>
-                      <p className="text-muted-foreground mb-4">
-                        Manage site configuration and integrations
-                      </p>
-                      <Button>
-                        <Edit className="h-4 w-4 mr-2" />
-                        Configure Settings
-                      </Button>
-                    </div>
+          <TabsContent value="blog">
+            <BlogManager />
+          </TabsContent>
+
+          <TabsContent value="media">
+            <MediaManager />
+          </TabsContent>
+
+          <TabsContent value="settings">
+            <Card>
+              <CardHeader>
+                <CardTitle>Site Settings</CardTitle>
+                <CardDescription>
+                  Configure your website settings and integrations
+                </CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="flex items-center justify-center h-48 border-2 border-dashed border-border rounded-lg">
+                  <div className="text-center">
+                    <Settings className="h-12 w-12 mx-auto text-muted-foreground mb-4" />
+                    <p className="text-lg font-semibold mb-2">Site Settings</p>
+                    <p className="text-muted-foreground mb-4">
+                      Manage site configuration and integrations
+                    </p>
+                    <Button>
+                      <Edit className="h-4 w-4 mr-2" />
+                      Configure Settings
+                    </Button>
                   </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
+                </div>
+              </CardContent>
+            </Card>
+          </TabsContent>
           </Tabs>
         </div>
       </div>
